@@ -2,7 +2,7 @@
 <Project DefaultTargets="Start" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<!--Properties-->
 	<PropertyGroup>
-		<SourceFolder>..\ConsoleApp</SourceFolder>
+		<SourceFolder>..\ConsoleApp\</SourceFolder>
 	</PropertyGroup>
 	<!--Start the build process-->
 	<Target Name="Start">
