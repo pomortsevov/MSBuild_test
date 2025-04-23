@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Start" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!--Properties-->
+    <PropertyGroup>
+        <SourceFolder>..\ConsoleApp</SourceFolder>
+    </PropertyGroup>
+    <!--Start the build process-->
+    <Target Name="Start">
+        <CallTarget Targets="Build"></CallTarget>
+    </Target>
+
+    <!--Build the metrics file-->
+    <Target Name="Build" >
+    <MSBuild
+        Projects="$(SourceFolder)\ConsoleApp.sln"
+        Properties="Configuration=Release"
+        Targets="Clean; Build"
+        ContinueOnError="false"
+        StopOnFirstFailure="true"/>
+    </Target>
+</Project>
